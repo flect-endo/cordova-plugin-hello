@@ -14,7 +14,7 @@
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"A Message from Objective-C"];
 
     UIAlertView *alert =
-    [[UIAlertView alloc] initWithTitle:@"test" message:@"test message" delegate:self cancelButtonTitle:@"OK" otherButtonTitle:nil];
+    [[UIAlertView alloc] initWithTitle:@"test" message:@"test message" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
