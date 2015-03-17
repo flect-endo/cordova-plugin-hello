@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="jp.co.flect.cordova.hello"
+    version="0.3.6">
+    <name>CDVHello</name>
+    <description>Cordova Hello Plugin</description>
+    <license>MIT</license>
+    <keywords>phonegap</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/hello.js" name="hello">
+        <clobbers target="plugins.hello" />
+    </js-module>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Hello">
+                <param name="ios-package" value="CDVHello"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/CDVHello.m" />
+        <header-file src="src/ios/CDVHello.h" />
+     </platform>
+
+</plugin>
